@@ -1,0 +1,5 @@
+name: HalloweenUtilities
+version: ${project.version}
+main: me.noodles.halloween.Main
+authors: [BGHDDevelopment]
+website: https://bghddevelopment.com/
