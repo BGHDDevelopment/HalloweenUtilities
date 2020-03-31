@@ -6,7 +6,7 @@ Messages:
   PrivateLightningMessage: '&7Hit all players with lightning! (no damage)'
   PumpkinHeadAllPlayersMessage: '&6&lEnjoy halloween with a pumpkin!'
   BatSwarmMessage: '&8&lBATS!'
-  
+
 #Commands & Permissions
 #/pumpkinhead - halloween.pumpkinhead
 #/lightning - halloween.lightning
