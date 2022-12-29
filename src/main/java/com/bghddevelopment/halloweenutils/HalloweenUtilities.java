@@ -1,5 +1,8 @@
 package com.bghddevelopment.halloweenutils;
 
+import co.aikar.commands.BukkitCommandIssuer;
+import co.aikar.commands.BukkitCommandManager;
+import co.aikar.commands.ConditionFailedException;
 import com.bghddevelopment.halloweenutils.commands.*;
 import com.bghddevelopment.halloweenutils.events.PumpkinPlace;
 import com.bghddevelopment.halloweenutils.mobs.Horse;
@@ -18,13 +21,13 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class Main extends JavaPlugin implements Listener {
+public class HalloweenUtilities extends JavaPlugin implements Listener {
 
-    public static Main plugin;
+    public static HalloweenUtilities plugin;
 
 
-    public static Main getPlugin() {
-        return (Main) getPlugin((Class) Main.class);
+    public static HalloweenUtilities getPlugin() {
+        return (HalloweenUtilities) getPlugin((Class) HalloweenUtilities.class);
     }
 
 
@@ -33,7 +36,7 @@ public class Main extends JavaPlugin implements Listener {
         this.saveDefaultConfig();
         this.reloadConfig();
         this.registerEvents();
-        this.registerCommands();
+
         plugin = this;
         updateCheck(Bukkit.getConsoleSender(), true);
     }
@@ -45,13 +48,15 @@ public class Main extends JavaPlugin implements Listener {
         pm.registerEvents(new Horse(), this);
     }
 
-    public void registerCommands() {
-        this.getCommand("halloween").setExecutor(new Halloween());
-        this.getCommand("pumpkinhead").setExecutor(new PumpkinHead());
-        this.getCommand("pumpkinheadall").setExecutor(new PumpkinHeadAllPlayers());
-        this.getCommand("lightning").setExecutor(new Lightning());
-        this.getCommand("batswarm").setExecutor(new BatSwarm());
-        this.getCommand("scare").setExecutor(new BlindScare());
+    private void loadCommands() {
+        BukkitCommandManager manager = new BukkitCommandManager(this);
+        manager.getCommandConditions().addCondition("noconsole", (context) -> {
+            BukkitCommandIssuer issuer = context.getIssuer();
+            if (!issuer.isPlayer()) {
+                throw new ConditionFailedException("Console cannot use this command.");
+            }
+        });
+        manager.registerCommand(new BatSwarmCommand());
 
     }
 

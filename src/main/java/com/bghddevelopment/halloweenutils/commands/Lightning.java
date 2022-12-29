@@ -1,12 +1,12 @@
 package com.bghddevelopment.halloweenutils.commands;
 
+import com.bghddevelopment.halloweenutils.HalloweenUtilities;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import com.bghddevelopment.halloweenutils.Main;
 
 public class Lightning implements CommandExecutor {
 
@@ -15,8 +15,8 @@ public class Lightning implements CommandExecutor {
 	String PublicLightningMessage;
 	
 	 public Lightning() {
-	        this.PrivateLightningMessage = ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Messages.PrivateLightningMessage"));
-	        this.PublicLightningMessage = ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Messages.PublicLightningMessage"));
+	        this.PrivateLightningMessage = ChatColor.translateAlternateColorCodes('&', HalloweenUtilities.getPlugin().getConfig().getString("Messages.PrivateLightningMessage"));
+	        this.PublicLightningMessage = ChatColor.translateAlternateColorCodes('&', HalloweenUtilities.getPlugin().getConfig().getString("Messages.PublicLightningMessage"));
 	
 	 } 
 	

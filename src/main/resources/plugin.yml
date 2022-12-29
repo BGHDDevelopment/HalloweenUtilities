@@ -1,5 +1,5 @@
 name: HalloweenUtilities
 version: 0.5
-main: com.bghddevelopment.halloweenutils.Main
+main: com.bghddevelopment.halloweenutils.HalloweenUtilities
 authors: [BGHDDevelopment]
 website: https://bghddevelopment.com/

@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import com.bghddevelopment.halloweenutils.Main;
+import com.bghddevelopment.halloweenutils.HalloweenUtilities;
 
 public class PumpkinHead implements CommandExecutor {
 
@@ -16,7 +16,7 @@ public class PumpkinHead implements CommandExecutor {
 	String PumpkinHeadMessage;
 	
 	 public PumpkinHead() {
-	        this.PumpkinHeadMessage = ChatColor.translateAlternateColorCodes('&', Main.getPlugin().getConfig().getString("Messages.PumpkinHeadMessage"));
+	        this.PumpkinHeadMessage = ChatColor.translateAlternateColorCodes('&', HalloweenUtilities.getPlugin().getConfig().getString("Messages.PumpkinHeadMessage"));
 	
 	 } 
 	
