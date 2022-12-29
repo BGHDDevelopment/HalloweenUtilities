@@ -1,4 +1,4 @@
-package me.noodles.halloween.events;
+package com.bghddevelopment.halloweenutils.events;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;

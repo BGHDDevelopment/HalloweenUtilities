@@ -1,4 +1,4 @@
-package me.noodles.halloween.commands;
+package com.bghddevelopment.halloweenutils.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -6,7 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import me.noodles.halloween.Main;
+import com.bghddevelopment.halloweenutils.Main;
 
 public class Lightning implements CommandExecutor {
 

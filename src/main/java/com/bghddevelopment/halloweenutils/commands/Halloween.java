@@ -1,4 +1,4 @@
-package me.noodles.halloween.commands;
+package com.bghddevelopment.halloweenutils.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

@@ -1,4 +1,4 @@
-package me.noodles.halloween.commands;
+package com.bghddevelopment.halloweenutils.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import me.noodles.halloween.Main;
+import com.bghddevelopment.halloweenutils.Main;
 
 public class PumpkinHead implements CommandExecutor {
 

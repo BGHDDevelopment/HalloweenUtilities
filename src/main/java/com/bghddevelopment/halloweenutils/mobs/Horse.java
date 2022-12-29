@@ -1,4 +1,4 @@
-package me.noodles.halloween.mobs;
+package com.bghddevelopment.halloweenutils.mobs;
 
 import java.util.Arrays;
 import java.util.List;

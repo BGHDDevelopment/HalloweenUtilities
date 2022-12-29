@@ -1,4 +1,4 @@
-package me.noodles.halloween.mobs;
+package com.bghddevelopment.halloweenutils.mobs;
 
 import org.bukkit.event.entity.*;
 import org.bukkit.entity.*;
