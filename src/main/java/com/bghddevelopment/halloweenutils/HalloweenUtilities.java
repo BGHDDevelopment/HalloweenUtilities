@@ -26,17 +26,12 @@ public class HalloweenUtilities extends JavaPlugin implements Listener {
     public static HalloweenUtilities plugin;
 
 
-    public static HalloweenUtilities getPlugin() {
-        return (HalloweenUtilities) getPlugin((Class) HalloweenUtilities.class);
-    }
-
-
     public void onEnable() {
         Color.log("Halloween Utilities by BGHDDevelopment Loading...");
         this.saveDefaultConfig();
         this.reloadConfig();
         this.registerEvents();
-
+        loadCommands();
         plugin = this;
         updateCheck(Bukkit.getConsoleSender(), true);
     }
@@ -57,7 +52,11 @@ public class HalloweenUtilities extends JavaPlugin implements Listener {
             }
         });
         manager.registerCommand(new BatSwarmCommand());
-
+        manager.registerCommand(new BlindScareCommand());
+        manager.registerCommand(new HalloweenCommand());
+        manager.registerCommand(new LightningCommand());
+        manager.registerCommand(new PumpkinHeadCommand());
+        manager.registerCommand(new PumpkinHeadAllCommand());
     }
 
     public void updateCheck(CommandSender sender, boolean console) {
