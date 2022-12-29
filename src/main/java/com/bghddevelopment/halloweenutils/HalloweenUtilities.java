@@ -4,16 +4,14 @@ import co.aikar.commands.BukkitCommandIssuer;
 import co.aikar.commands.BukkitCommandManager;
 import co.aikar.commands.ConditionFailedException;
 import com.bghddevelopment.halloweenutils.commands.*;
-import com.bghddevelopment.halloweenutils.events.PumpkinPlace;
-import com.bghddevelopment.halloweenutils.mobs.Horse;
-import com.bghddevelopment.halloweenutils.mobs.MobHeads;
+import com.bghddevelopment.halloweenutils.events.MobEvents;
+import com.bghddevelopment.halloweenutils.events.PumpkinEvents;
 import com.bghddevelopment.halloweenutils.utils.Color;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
-import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.BufferedReader;
@@ -37,10 +35,8 @@ public class HalloweenUtilities extends JavaPlugin implements Listener {
     }
 
     public void registerEvents() {
-        final PluginManager pm = this.getServer().getPluginManager();
-        pm.registerEvents(new MobHeads(), this);
-        pm.registerEvents(new PumpkinPlace(), this);
-        pm.registerEvents(new Horse(), this);
+        Bukkit.getPluginManager().registerEvents(new MobEvents(), this);
+        Bukkit.getPluginManager().registerEvents(new PumpkinEvents(), this);
     }
 
     private void loadCommands() {
