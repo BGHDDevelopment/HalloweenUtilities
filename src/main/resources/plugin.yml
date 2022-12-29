@@ -1,18 +1,5 @@
 name: HalloweenUtilities
-version: ${project.version}
-main: me.noodles.halloween.Main
+version: 0.5
+main: com.bghddevelopment.halloweenutils.HalloweenUtilities
 authors: [BGHDDevelopment]
 website: https://bghddevelopment.com/
-commands:
-  pumpkinhead:
-    description: Put a pumpkin on your head!
-  lightning:
-    description: Haunt players with lightning!
-  pumpkinheadall:
-    description: Put a pumpkin on all players heads!
-  batswarm:
-    description: Spawn a swarm of bats on every player!
-  halloween:
-    description: Halloween plugin info!
-  scare:
-    description: Scare Players!
