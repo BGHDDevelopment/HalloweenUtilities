@@ -4,6 +4,7 @@ import com.bghddevelopment.halloweenutils.commands.*;
 import com.bghddevelopment.halloweenutils.events.PumpkinPlace;
 import com.bghddevelopment.halloweenutils.mobs.Horse;
 import com.bghddevelopment.halloweenutils.mobs.MobHeads;
+import com.bghddevelopment.halloweenutils.utils.Color;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -19,7 +20,7 @@ public class Main extends JavaPlugin implements Listener {
 
 
     public void onEnable() {
-        this.getLogger().info("Halloween Utilities by BGHDDevelopment Loading...");
+        Color.log("Halloween Utilities by BGHDDevelopment Loading...");
         this.saveDefaultConfig();
         this.reloadConfig();
         this.registerEvents();
